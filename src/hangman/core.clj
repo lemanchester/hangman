@@ -1,8 +1,10 @@
 (ns hangman.core
-  (:gen-class))
+  (:gen-class)
+  (:use faker.name faker.lorem faker.internet)
+)
 
-(def lives-total 6)
-(def secret-word "WATERMELON")
+(def lives-total 9)
+(def secret-word (domain-word))
 
 (defn lose [] (print "You lose"))
 (defn won [] (print "You won"))
